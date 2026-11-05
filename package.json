@@ -1,0 +1,61 @@
+{
+  "name": "dsh-live-speed",
+  "version": "0.1.0",
+  "private": false,
+  "description": "在输入框下方显示本轮实时输出速度（tok/s），与会话统计里的整段平均分开。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "icon.svg"
+  ],
+  "license": "MIT",
+  "author": "shutongX",
+  "homepage": "https://github.com/shutongX/dsh-live-speed#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shutongX/dsh-live-speed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shutongX/dsh-live-speed/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "tokens",
+    "speed",
+    "tps",
+    "cordis"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.1 <3"
+  },
+  "icon": "./icon.svg",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/client.js"
+  }
+}

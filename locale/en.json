@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Live output speed",
+    "description": "Shows this turn's live generation speed beside the session-total average."
+  }
+}

@@ -1,0 +1,4 @@
+# dsh bundle patch: mounts the live speed host entry.
+- insert:
+    - id: live-speed
+      name: 'dsh-live-speed'
